@@ -28,10 +28,10 @@ object MyMain {
         StructField("TrafficVol", IntegerType, true),
         StructField("Time", LongType, true)))
 
-    if (args.length > 3) {
-      val data_path: String = args(0)
-      val rules_path: String = args(1)
-      val segments_path: String = args(2)
+    if (true) { // args.length > 3
+      val data_path: String = "E:\\data_sets\\data" // args(0)
+      val rules_path: String = "E:\\data_sets\\RULES.csv" // args(1)
+      val segments_path: String = "E:\\data_sets\\SEGMENT.csv" // args(2)
 
       var Data = sqlContext.createDataFrame(sc.emptyRDD[Row], Data_Schema)
       try {
